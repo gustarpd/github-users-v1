@@ -1,22 +1,28 @@
 import { Header } from "./components/Header";
 import { InputArea } from "./components/InputArea";
 import { Rotas } from "./Rotas";
-import { CreateProvider } from "./context";
+import { useState } from "react";
+import client from "./services/client";
+import { ContextProvider } from "./contexts/Context";
+
 export type Image = {
   name: string;
   url: string;
   bio: string;
   username: string;
+  follower: string;
+  follow: string;
+  repos: string;
 };
 
 function App() {
   return (
     <>
-      <CreateProvider>
+      <ContextProvider>
         <Header></Header>
         <InputArea></InputArea>
         <Rotas />
-      </CreateProvider>
+      </ContextProvider>
     </>
   );
 }

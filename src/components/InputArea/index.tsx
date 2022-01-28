@@ -1,22 +1,24 @@
 import * as C from "./style";
 import { useState, useContext } from "react";
-import client from '../../services/client'
-import { context } from "../../context";
+import client from "../../services/client";
+import { Content} from "../../contexts/Context";
 
 
 
 export const InputArea = () => {
-  const ctx = useContext(context)
+  const ctx = useContext(Content)
   const [searchValue, setSearchValue] = useState("");
  
   async function getUser(): Promise<void> {
     try {
       const response = await client.get(`/${searchValue}`)
-      ctx.setUserData(response.data)
+      const repos = await client.get(`/${searchValue}`)
+      ctx.setUsers(response.data)
     }catch(err) {
      console.log(err)
     }
   };
+
   console.log(ctx)
   return (
     <>
@@ -30,3 +32,4 @@ export const InputArea = () => {
     </>
   );
 };
+ 

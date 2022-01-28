@@ -18,15 +18,15 @@ return(
       <C.UserBio>{props?.bio}</C.UserBio>
       <C.UserList>
         <div>
-          <p onClick={handleParamsButton}>777</p>
-          <span>Seguidotes</span>
+          <p>{props.follower}</p>
+          <span>Seguidores</span>
         </div>
         <div>
-          <p>432</p>
-          <span>Seguidotes</span>
+          <p>{props.follow}</p>
+          <span>Seguindo</span>
         </div>
         <div>
-          <p>432</p>
+          <p onClick={handleParamsButton} className="reposPage">{props.repos}</p>
           <span>Respositorios</span>
         </div>
       </C.UserList>

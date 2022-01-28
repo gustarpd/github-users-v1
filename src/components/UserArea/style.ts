@@ -25,11 +25,14 @@ export const UserDetails = styled.h3`
 margin: 40px 0 0 0;
 div{
 margin: 40px 0 0 0;
+padding: 20p;
 }
 `
 
 export const UserBio = styled.h4`
 margin: 20px 0 0 0;
+text-align: center;
+width: 80%;
 `
 
 export const UserList = styled.div`
@@ -42,5 +45,9 @@ export const UserList = styled.div`
  div{
      text-align: center;
      margin: 0 10px 0 0;
+ }
+
+ .reposPage{
+   cursor: pointer;
  }
 `
