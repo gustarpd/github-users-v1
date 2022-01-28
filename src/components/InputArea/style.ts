@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InputArea = styled.div`
-  max-width: 450px;
+  max-width: 650px;
   height: 50px;
   margin: 0 auto;
   border-radius: 4px;
@@ -16,10 +16,13 @@ export const InputArea = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 1650px
+  width: 100%;
   height: 40px;
+  outline: 0;
 `
 export const Button = styled.button`
-margin: 0 0 0 10px;
 
+margin: 0 0 0 10px;
+height: 40px;
+cursor: pointer;
 `

@@ -15,7 +15,7 @@ export const InputArea = () => {
       const repos = await client.get(`/${searchValue}`)
       ctx.setUsers(response.data)
     }catch(err) {
-     console.log(err)
+     console.log(err) 
     }
   };
 
@@ -29,6 +29,8 @@ export const InputArea = () => {
         ></C.Input>
         <C.Button onClick={getUser}>Procurar</C.Button>
       </C.InputArea>
+
+      
     </>
   );
 };
